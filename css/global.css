@@ -40,3 +40,40 @@ html, body {
     --color-white:#FFFFFF;
     --color-gray--light:#EDEDED;
 }
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track:hover {
+    background: #f1f1f1;
+    width: 20px;
+  }
+  
+  ::-webkit-scrollbar:hover {
+    border: 2px solid transparent;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 5px;
+    border: 0;
+    transition: 300ms linear;
+  }
+  
+  *:hover::-webkit-scrollbar {
+      width: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    width: 5px;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border: 2px solid transparent;
+  }
