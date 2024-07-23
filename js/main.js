@@ -87,51 +87,67 @@ window.onload = function () {
         menu_contact.classList.add('active');
     })
 
-    // DATE setter
-    let date = new Date();
-    console.log(date);
-    let day = '';
-    console.log(typeof date.getDay())
-    switch (date.getDay()) {
-        case 1:
-            day = 'Lun.';
-            break;
-        case 2:
-            day = 'Mar.';
-            break;
-        case 3:
-            day = 'Mer.';
-            break;
-        case 4:
-            day = 'Jeu.';
-            break;
-        case 5:
-            day = 'Ven.';
-            break;
-        case 6:
-            day = 'Sam.';
-            break;
-        case 0:
-            day = 'Dim.';
-            break;
-        default:
-            break;
+
+    // definition of the main functions
+    function updateDateTime() {
+        // DATE setter
+        let date = new Date();
+        // console.log(date);
+        let day = '';
+        // console.log(typeof date.getDay())
+        switch (date.getDay()) {
+            case 1:
+                day = 'Lun.';
+                break;
+            case 2:
+                day = 'Mar.';
+                break;
+            case 3:
+                day = 'Mer.';
+                break;
+            case 4:
+                day = 'Jeu.';
+                break;
+            case 5:
+                day = 'Ven.';
+                break;
+            case 6:
+                day = 'Sam.';
+                break;
+            case 0:
+                day = 'Dim.';
+                break;
+            default:
+                break;
+        }
+        // console.log(day)
+        let dateComputed = day + ' ' + ((date.getDate() < 10) ? '0'+ date.getDate() : date.getDate());
+        let hours = (date.getHours() < 10) ? '0'+ date.getHours() : date.getHours();
+        let minutes = (date.getMinutes() < 10) ? '0'+ date.getMinutes() : date.getMinutes();
+        let hourComputed = hours + ':' + minutes;
+        if (document.getElementById('hour') != undefined && document.getElementById('date') != undefined) {
+            document.getElementById('hour').innerText = hourComputed;
+            document.getElementById('date').innerText = dateComputed;
+        } else {
+            // console.log(dateComputed)
+            let p = document.createElement('p');
+            p.setAttribute("id","hour");
+            let textNode = document.createTextNode(hourComputed);
+            p.appendChild(textNode);
+            container_hour.appendChild(p);
+        
+            p = document.createElement('p');
+            p.setAttribute("id","date");
+            textNode = document.createTextNode(dateComputed);
+            p.appendChild(textNode);
+            container_date.appendChild(p);
+        }
     }
-    console.log(day)
-    let dateComputed = day + ' ' + ((date.getDate() < 10) ? '0'+ date.getDate() : date.getDate());
-    let hours = (date.getHours() < 10) ? '0'+ date.getHours() : date.getHours();
-    let minutes = (date.getMinutes() < 10) ? '0'+ date.getMinutes() : date.getMinutes();
-    let hourComputed = hours + ':' + minutes;
 
-    console.log(dateComputed)
+    // call of the main functions
 
-    let p = document.createElement('p');
-    let textNode = document.createTextNode(hourComputed);
-    p.appendChild(textNode);
-    container_hour.appendChild(p);
-
-    p = document.createElement('p');
-    textNode = document.createTextNode(dateComputed);
-    p.appendChild(textNode);
-    container_date.appendChild(p);
+    // Update the date and time every second (1000 milliseconds).
+    setInterval(updateDateTime, 1000);
+    // Initial update.
+    updateDateTime();
 }
