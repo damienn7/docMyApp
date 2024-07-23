@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D.N. - MyApp</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="style-panel">
+            <div class="style-panel__date"></div>
+            <div class="style-panel__hour"></div>
+        </div>
+        <div class="nav-panel">
+            <nav class="nav-container">
+                <ul class="nav__ul">
+                    <li class="nav__ul__li active" id="li-1">Planning</li>
+                    <li class="nav__ul__li" id="li-2">Plan</li>
+                    <li class="nav__ul__li" id="li-3">Projet Mobile</li>
+                    <li class="nav__ul__li" id="li-4">Ressources</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="info-panel">
+            <div class="info-panel-block" id="presentation">
+                <h2 class="info-panel-block__title">Planning</h2>
+                <div class="container-plan">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Semaine</th>
+                                <th>Tâches</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Recherche et choix des technologies, définition des fonctionnalités</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Mise en place de l'environnement de développement, début de la maquette</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Développement des fonctionnalités principales, intégration des capteurs</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Intégration de l'API, tests et ajustements</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Finalisation du développement, optimisation de l'UX/UI</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Tests finaux, préparation de la présentation, rédaction de la documentation</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="info-panel-block" id="entreprise" style="display: none;">
+                <h2 class="info-panel-block__title">Plan</h2>
+                <div class="container-plan">
+                    <h2>1. Technos Possibles</h2>
+
+                    <h3>1.1 Frameworks</h3>
+                    <ul>
+                        <li><b>Flutter</b>: Développé par Google, Flutter permet de créer des applications nativement
+                            compilées pour mobile, web et desktop à partir d'une base de code unique.</li>
+                        <li><b>React Native</b>: Développé par Facebook, ce framework permet de construire des
+                            applications mobiles en utilisant JavaScript et React.</li>
+                        <li><b>Ionic</b>: Framework open-source pour la création d'applications mobiles hybrides en
+                            utilisant HTML, CSS et JavaScript, souvent avec Angular.</li>
+                        <li><b>Kotlin</b>: Langage de programmation moderne, sécurisé et concis pour le développement
+                            d'applications Android natives.</li>
+                    </ul>
+
+                    <h3>1.2 Environnements de Développement</h3>
+                    <ul>
+                        <li><b>Android Studio</b>: IDE officiel pour le développement Android, supportant Java, Kotlin
+                            et Flutter.</li>
+                        <li><b>Xcode</b>: IDE officiel pour le développement iOS, supportant Swift et Objective-C.</li>
+                        <li><b>Visual Studio Code</b>: IDE polyvalent, utilisé souvent avec Flutter et React Native
+                            grâce à ses extensions.</li>
+                    </ul>
+
+                    <h3>1.3 API Management</h3>
+                    <ul>
+                        <li><b>Retrofit</b>: Librairie pour Android et Java pour simplifier les appels API REST.</li>
+                        <li><b>Axios</b>: Client HTTP basé sur les promesses pour JavaScript, utilisé souvent avec React
+                            Native.</li>
+                        <li><b>Dio</b>: Puissant client HTTP pour Dart, souvent utilisé avec Flutter.</li>
+                    </ul>
+
+                    <h2>2. Techno Conseillée</h2>
+                    <p><b>Flutter</b> est recommandé pour plusieurs raisons :</p>
+                    <ul>
+                        <li><b>Cross-Platform</b>: Une base de code unique pour Android et iOS.</li>
+                        <li><b>Performances</b>: Utilise Dart qui compile en code natif, offrant des performances
+                            proches du natif.</li>
+                        <li><b>UI Riches</b>: Large éventail de widgets personnalisables et out-of-the-box.</li>
+                        <li><b>Communauté</b>: Forte communauté de développeurs et support de Google.</li>
+                        <li><b>Documentation</b>: Documentation exhaustive et ressources abondantes pour les débutants.
+                        </li>
+                    </ul>
+
+                    <h2>3. Idées de Projet Mobile Accessible pour un Niveau Intermédiaire</h2>
+                    <ul>
+                        <li><b>Application de Fitness</b>: Utilise l'accéléromètre et le gyroscope pour suivre les
+                            mouvements et la position lors des exercices, combiné avec une API de nutrition pour fournir
+                            des conseils diététiques.</li>
+                        <li><b>Guide de Voyage</b>: Utilise les capteurs de proximité et l'orientation pour offrir des
+                            informations sur les points d'intérêt à proximité, en se connectant à une API de guide de
+                            voyage.</li>
+                        <li><b>Gestion de Tâches et de Projets</b>: Intégration avec l'agenda et les contacts pour gérer
+                            les tâches et projets collaboratifs, en utilisant une API de gestion de tâches.</li>
+                    </ul>
+
+                    <h2>4. Idée de Projet Conseillée</h2>
+                    <p><b>Application de Fitness</b> :</p>
+                    <ul>
+                        <li><b>Fonctionnalités</b>: Suivi des mouvements, suivi de la position, conseils diététiques.
+                        </li>
+                        <li><b>Capteurs Utilisés</b>: Accéléromètre, gyroscope, GPS.</li>
+                        <li><b>API Utilisée</b>: API de nutrition (ex: Edamam, Nutritionix).</li>
+                    </ul>
+
+                    <h2>5. Détails du Sujet avec Points Clés</h2>
+                    <p><b>Nom de l'application</b>: FitTrack</p>
+                    <p><b>Fonctionnalités Clés</b>:</p>
+                    <ul>
+                        <li><b>Suivi d'Activité</b>: Utilisation de l'accéléromètre et du gyroscope pour suivre les
+                            mouvements pendant l'exercice.</li>
+                        <li><b>Suivi de Position</b>: Utilisation du GPS pour suivre les parcours de course ou de
+                            marche.</li>
+                        <li><b>Conseils Nutritionnels</b>: Connexion à une API de nutrition pour fournir des
+                            recommandations diététiques personnalisées.</li>
+                        <li><b>Historique et Statistiques</b>: Suivi des progrès et des performances au fil du temps.
+                        </li>
+                    </ul>
+
+                    <p><b>Requêtes API</b>:</p>
+                    <ul>
+                        <li><b>Recherche d'Aliments</b>: Obtenir des informations nutritionnelles sur des aliments
+                            spécifiques.</li>
+                        <li><b>Recommandations de Recettes</b>: Rechercher des recettes saines basées sur les
+                            préférences alimentaires.</li>
+                        <li><b>Suivi des Calories</b>: Suivre l'apport calorique quotidien.</li>
+                        <li><b>Suivi des Nutriments</b>: Obtenir des informations sur les macros et micronutriments
+                            consommés.</li>
+                        <li><b>Analyse des Repas</b>: Analyse des repas basés sur les informations saisies par
+                            l'utilisateur.</li>
+                    </ul>
+
+                    <p><b>Capteurs Utilisés</b>:</p>
+                    <ul>
+                        <li><b>Accéléromètre</b>: Suivi des mouvements et des activités physiques.</li>
+                        <li><b>Gyroscope</b>: Détection des orientations et des changements de posture.</li>
+                        <li><b>GPS</b>: Suivi des parcours et des distances parcourues.</li>
+                    </ul>
+
+                    <h2>6. Proposition de Plan et de Planning</h2>
+
+                    <h3>Plan du Projet</h3>
+                    <ol>
+                        <li><b>Introduction</b>
+                            <ul>
+                                <li>Présentation du projet et des objectifs</li>
+                                <li>Choix technologiques et justification</li>
+                            </ul>
+                        </li>
+                        <li><b>Description des Fonctionnalités</b>
+                            <ul>
+                                <li>Détailler chaque fonctionnalité clé</li>
+                                <li>Explication des capteurs utilisés et leur intégration</li>
+                            </ul>
+                        </li>
+                        <li><b>Intégration de l'API</b>
+                            <ul>
+                                <li>Présentation de l'API choisie</li>
+                                <li>Détail des requêtes et de leur utilisation</li>
+                            </ul>
+                        </li>
+                        <li><b>UX/UI</b>
+                            <ul>
+                                <li>Présentation des designs et des maquettes</li>
+                                <li>Explications sur les choix de design</li>
+                            </ul>
+                        </li>
+                        <li><b>Démo</b>
+                            <ul>
+                                <li>Démonstration de l'application fonctionnelle</li>
+                            </ul>
+                        </li>
+                        <li><b>Conclusion</b>
+                            <ul>
+                                <li>Résumé du projet</li>
+                                <li>Retours d'expérience et pistes d'amélioration</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="info-panel-block" id="projets" style="display: none;">
+                <h2 class="info-panel-block__title">MyApp</h2>
+                <div class="container-my-app">
+                    <div class="tab-container">
+                        <div class="tabs">
+                            <button class="tab-button active" data-tab="sujet">Sujet du Projet</button>
+                            <button class="tab-button" data-tab="kickoff">Kick-off du Projet</button>
+                        </div>
+                        <div id="sujet" class="tab-content active">
+                            <embed src="./assets/pdf/S4-sujet_mobile_avance.pdf" type="application/pdf">
+                        </div>
+                        <div id="kickoff" class="tab-content">
+                            <embed src="./assets/pdf/W-WEB-320_my-app_KickOff.pdf" type="application/pdf">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-panel-block" id="contact" style="display: none;">
+                <h2 class="info-panel-block__title">Ressources</h2>
+                <div class="container-plan">
+                    <h2>Liens Annexes Utiles partagés dans le sujet</h2>
+                    <ul>
+                        <li><a href="https://netbeans.org/community/releases/81/index.html" target="_blank">NetBeans
+                                8.1</a></li>
+                        <li><a href="http://www.javaworld.com/article/2074670/mobile-java/mobile-java-best-tools-for-mobile-application-development.html"
+                                target="_blank">Best Tools for Mobile Application Development - JavaWorld</a></li>
+                        <li><a href="https://docs.unrealengine.com/latest/INT/Platforms/Mobile/" target="_blank">Unreal
+                                Engine Mobile Development Documentation</a></li>
+                        <li><a href="https://unity3d.com" target="_blank">Unity3D</a></li>
+                        <li><a href="https://developer.android.com/studio/index.html" target="_blank">Android Studio</a>
+                        </li>
+                        <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=35471"
+                                target="_blank">Microsoft Windows Phone SDK 8.0</a></li>
+                        <li><a href="https://github.com/toddmotto/public-apis" target="_blank">Public APIs - GitHub</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

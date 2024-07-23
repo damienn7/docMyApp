@@ -1,0 +1,42 @@
+/*
+    +-------------+
+    |  gloabl.css |
+    +-------------+
+    Description : here we have all the css needed to init the product
+*/
+
+/* 
+    init the style of all of the html elements
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* 
+    set the font for all elements
+*/
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+ /* 
+    unset the ul and li html elements default values
+ */
+ ul, li {
+    list-style: none;
+ }
+
+/* 
+    variables colors
+*/
+
+:root {
+    /* colors */
+    --color-blue--light: #007ACC;
+    --color-blue--medium: #0068AD;
+    --color-blue--dark:#001829;
+    --color-white:#FFFFFF;
+    --color-gray--light:#EDEDED;
+}

@@ -1,0 +1,22 @@
+/*
+    +-------------+
+    |  utils.css  |
+    +-------------+
+    Description : here we have all the reusable css needed in the product
+*/
+
+.b-200 {
+    font-weight: 200 !important;
+}
+
+.b-400 {
+   font-weight: 400 !important;
+}
+
+.b-600 {
+   font-weight: 600 !important;
+}
+
+.b-800 {
+    font-weight: 800 !important;
+}
