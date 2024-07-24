@@ -145,6 +145,8 @@
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
   max-height: 50vh;
+  max-width: 55vw;
+  width: 50vw;
   overflow-y: auto;
   background-color: #fff;
   padding: 20px;
