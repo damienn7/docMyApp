@@ -20,7 +20,7 @@
         <div class="nav-panel">
             <nav class="nav-container">
                 <ul class="nav__ul">
-                    <li class="nav__ul__li active" id="li-1">Planning</li>
+                    <li class="nav__ul__li active" id="li-1">Suivi</li>
                     <li class="nav__ul__li" id="li-2">Plan</li>
                     <li class="nav__ul__li" id="li-3">Projet Mobile</li>
                     <li class="nav__ul__li" id="li-4">Ressources</li>
@@ -29,42 +29,161 @@
         </div>
         <div class="info-panel">
             <div class="info-panel-block" id="presentation">
-                <h2 class="info-panel-block__title">Planning</h2>
-                <div class="container-plan">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Semaine</th>
-                                <th>Tâches</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Recherche et choix des technologies, définition des fonctionnalités</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Mise en place de l'environnement de développement, début de la maquette</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Développement des fonctionnalités principales, intégration des capteurs</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Intégration de l'API, tests et ajustements</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Finalisation du développement, optimisation de l'UX/UI</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>Tests finaux, préparation de la présentation, rédaction de la documentation</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <h2 class="info-panel-block__title">Suivi de projet</h2>
+                <div class="container-tab-suivi">
+                    <div class="tab-container">
+                        <div class="tabs">
+                            <button class="tab-button active" data-tab="planning">Planning</button>
+                            <button class="tab-button" data-tab="environnement-install">Flutter - Dart</button>
+                        </div>
+                        <div id="planning" class="tab-content active">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Semaine</th>
+                                        <th>Tâches</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Recherche et choix des technologies, définition des fonctionnalités</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Mise en place de l'environnement de développement, début de la maquette</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Développement des fonctionnalités principales, intégration des capteurs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Intégration de l'API, tests et ajustements</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Finalisation du développement, optimisation de l'UX/UI</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Tests finaux, préparation de la présentation, rédaction de la documentation
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="environnement-install" class="tab-content">
+                            <!-- <div class="container"> -->
+                            <h1>Installation de Flutter et Dart</h1>
+                            <h2>1. Pourquoi Dart ?</h2>
+                            <ul>
+                                <li><strong>Performance :</strong> Dart compile directement en code machine natif, ce
+                                    qui permet des performances élevées et une exécution rapide des applications.</li>
+                                <li><strong>Productivité :</strong> Dart offre des fonctionnalités comme le hot reload,
+                                    permettant de voir instantanément les changements dans l'application sans devoir la
+                                    redémarrer.</li>
+                                <li><strong>Facilité d'apprentissage :</strong> Dart est relativement facile à
+                                    apprendre, surtout pour ceux qui ont une expérience avec des langages de
+                                    programmation comme JavaScript ou Java.</li>
+                            </ul>
+
+                            <h2>2. Utiliser Flutter avec Dart</h2>
+                            <h3>Installation de Flutter :</h3>
+                            <ol>
+                                <li>Téléchargez et installez le SDK Flutter depuis <a
+                                        href="https://flutter.dev/docs/get-started/install"
+                                        target="_blank">flutter.dev</a>.</li>
+                                <li>Ajoutez Flutter à votre PATH.</li>
+                            </ol>
+
+                            <h3>Configuration de l'environnement de développement :</h3>
+                            <ol>
+                                <li>Installez un éditeur de code comme Visual Studio Code ou Android Studio.</li>
+                                <li>Ajoutez les extensions Flutter et Dart à votre éditeur.</li>
+                            </ol>
+
+                            <h3>Créer un nouveau projet Flutter :</h3>
+                            <pre><code>flutter create my_app
+                        cd my_app
+                        flutter run
+                            </code></pre>
+
+                            <h2>3. Exemple de Projet Flutter avec Dart</h2>
+                            <h3>main.dart :</h3>
+                            <pre><code>import 'package:flutter/material.dart';
+                        
+                        void main() {
+                          runApp(MyApp());
+                        }
+                        
+                        class MyApp extends StatelessWidget {
+                          @override
+                          Widget build(BuildContext context) {
+                            return MaterialApp(
+                              home: Scaffold(
+                                appBar: AppBar(
+                                  title: Text('Flutter Demo'),
+                                ),
+                                body: Center(
+                                  child: Text('Hello, Flutter!'),
+                                ),
+                              ),
+                            );
+                          }
+                        }
+                            </code></pre>
+
+                            <h2>4. Intégration avec API Publique et Fonctions du Téléphone</h2>
+                            <h3>Intégrer une API Publique :</h3>
+                            <p>Utilisez le package <code>http</code> pour effectuer des requêtes HTTP.</p>
+                            <p>Ajoutez le package à votre <code>pubspec.yaml</code> :</p>
+                            <pre><code>dependencies:
+                          flutter:
+                            sdk: flutter
+                          http: ^0.13.3
+                            </code></pre>
+
+                            <h3>Utiliser les fonctionnalités du téléphone :</h3>
+                            <p>Utilisez des packages comme <code>geolocator</code> pour accéder à la localisation,
+                                <code>sensor</code> pour l'accéléromètre et le gyroscope, etc.</p>
+                            <p>Exemple d'utilisation de <code>geolocator</code> :</p>
+                            <pre><code>dependencies:
+                          geolocator: ^8.0.0
+                            </code></pre>
+                            <p>Exemple d'utilisation dans votre code :</p>
+                            <pre><code>import 'package:geolocator/geolocator.dart';
+                        
+                        Future<void> _getCurrentLocation() async {
+                          Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+                          print(position);
+                        }
+                            </code></pre>
+
+                            <h2>5. Avantages de Flutter et Dart</h2>
+                            <ul>
+                                <li><strong>Développement Rapide :</strong></li>
+                                <ul>
+                                    <li><strong>Hot Reload :</strong> Permet de voir les changements instantanément.
+                                    </li>
+                                    <li><strong>Widgets :</strong> Une large bibliothèque de widgets préconstruits pour
+                                        créer des interfaces utilisateur attractives.</li>
+                                </ul>
+                                <li><strong>Performance Elevée :</strong></li>
+                                <ul>
+                                    <li><strong>Compilation Natif :</strong> Dart compile en code natif, offrant des
+                                        performances similaires à celles des applications écrites en Swift ou Kotlin.
+                                    </li>
+                                </ul>
+                                <li><strong>Support Multi-plateformes :</strong></li>
+                                <ul>
+                                    <li>Créez des applications pour Android, iOS, Web et Desktop avec une seule base de
+                                        code.</li>
+                                </ul>
+                            </ul>
+                            <!-- </div> -->
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="info-panel-block" id="entreprise" style="display: none;">
