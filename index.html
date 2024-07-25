@@ -89,23 +89,54 @@
                             </ul>
 
                             <h2>2. Utiliser Flutter avec Dart</h2>
-                            <h3>Installation de Flutter :</h3>
-                            <ol>
-                                <li>Téléchargez et installez le SDK Flutter depuis <a
-                                        href="https://flutter.dev/docs/get-started/install"
-                                        target="_blank">flutter.dev</a>.</li>
-                                <li>Ajoutez Flutter à votre PATH.</li>
-                            </ol>
-
-                            <h3>Configuration de l'environnement de développement :</h3>
-                            <ol>
-                                <li>Installez un éditeur de code comme Visual Studio Code ou Android Studio.</li>
-                                <li>Ajoutez les extensions Flutter et Dart à votre éditeur.</li>
-                            </ol>
-
-                            <h3>Créer un nouveau projet Flutter :</h3>
-                            <pre><code>flutter create my_app
-                        cd my_app
+                            <h3>Télécharger et Installer Flutter SDK :</h3>
+                            <pre><code>sh
+                        cd ~
+                        curl -O https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.0.0-stable.tar.xz
+                        tar xf flutter_linux_3.0.0-stable.tar.xz
+                        echo 'export PATH="$PATH:$HOME/flutter/bin"' >> ~/.bashrc
+                        source ~/.bashrc
+                            </code></pre>
+                        
+                            <h3>Vérifier l'installation de Flutter :</h3>
+                            <pre><code>sh
+                        flutter doctor
+                            </code></pre>
+                        
+                            <h2>Configurer Android Studio</h2>
+                            <h3>Installer Android Studio sur Windows :</h3>
+                            <p>Téléchargez et installez Android Studio depuis <a href="https://developer.android.com/studio">developer.android.com/studio</a>.</p>
+                        
+                            <h3>Configurer les Outils de Développement Android :</h3>
+                            <p>Ouvrez Android Studio, allez dans <code>Configuration &gt; SDK Manager</code> et installez les SDKs nécessaires pour Android.</p>
+                        
+                            <h3>Configurer les Variables d'Environnement pour WSL :</h3>
+                            <pre><code>sh
+                        echo 'export ANDROID_HOME=/mnt/c/Users/&lt;your-username&gt;/AppData/Local/Android/Sdk' >> ~/.bashrc
+                        echo 'export PATH=$PATH:$ANDROID_HOME/tools/bin' >> ~/.bashrc
+                        echo 'export PATH=$PATH:$ANDROID_HOME/platform-tools' >> ~/.bashrc
+                        echo 'export PATH=$PATH:$ANDROID_HOME/emulator' >> ~/.bashrc
+                        source ~/.bashrc
+                            </code></pre>
+                        
+                            <h2>Configurer un Émulateur Android</h2>
+                            <h3>Créer un Émulateur Android :</h3>
+                            <p>Depuis Android Studio, utilisez l'AVD Manager pour créer un nouvel émulateur Android.</p>
+                        
+                            <h3>Lancer l'Émulateur :</h3>
+                            <pre><code>sh
+                        emulator -avd &lt;name-of-your-emulator&gt;
+                            </code></pre>
+                        
+                            <h2>Créer et Exécuter un Projet Flutter</h2>
+                            <h3>Créer un Nouveau Projet Flutter :</h3>
+                            <pre><code>sh
+                                flutter create my_app
+                                cd my_app
+                                    </code></pre>
+                        
+                            <h3>Exécuter le Projet Flutter :</h3>
+                            <pre><code>sh
                         flutter run
                             </code></pre>
 
@@ -372,6 +403,19 @@
                         <li><a href="https://medium.com/flutter/io24-5e211f708a37" target="_blank">Talk about Flutter 3.22 and Dart 3.4</a></li>
                         <li><a href="https://dartpad.dev/" target="_blank">Explore Dart in the browser</a></li>
                         <li><a href="https://api.dart.dev/stable/3.4.4/index.html" target="_blank">Dart api documentation</a></li>  
+                    </ul>
+                    <h2>Liens Annexes Utiles dans la Recherche d'API</h2>
+                    <ul>
+                        <li><a href="https://talks.freelancerepublik.com/api-publiques-gratuites-developpement-site-app/#6-themoviedb" target="_blank">10 API gratuites et publiques</a></li>
+                        <li><a href="https://www.data.gouv.fr/fr/" target="_blank">API data.gouv</a></li>
+                        <li><a href="https://rapidapi.com/search/Sports?sortBy=ByRelevance" target="_blank">Hub API - RapidAPI</a></li>
+                    </ul>
+                    <h2>Liens Annexes Utiles pour l'installation de l'environnement Flutter</h2>
+                    <ul>
+                        <li><a href="https://docs.flutter.dev/get-started/install/windows/mobile" target="_blank">Installation de Flutter p.1</a></li>
+                        <li><a href="https://docs.flutter.dev/get-started/install/linux/android" target="_blank">Installation de Flutter p.2</a></li>
+                        <li><a href="https://developer.android.com/studio/install#windows" target="_blank">Installation d'Android Studio</a></li>
+                        <li><a href="https://developer.android.com/studio/run/emulator-acceleration#accel-vm" target="_blank">Installation de l'emulator</a></li> 
                     </ul>
                 </div>
             </div>
