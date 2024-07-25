@@ -12,11 +12,13 @@ window.onload = function () {
     let block_entreprise = document.getElementById('entreprise');
     let block_projets = document.getElementById('projets');
     let block_contact = document.getElementById('contact');
+    let block_commit = document.getElementById('commit');
     
     let menu_presentation = document.getElementById('li-1');
     let menu_entreprise = document.getElementById('li-2');
     let menu_projets = document.getElementById('li-3');
     let menu_contact = document.getElementById('li-4');
+    let menu_commit = document.getElementById('li-5');
 
     let container_date = document.getElementsByClassName('style-panel__date')[0];
     let container_hour = document.getElementsByClassName('style-panel__hour')[0];
@@ -45,9 +47,11 @@ window.onload = function () {
     
     menu_presentation.addEventListener('click', (e) => {
         block_presentation.style.display = 'flex';
+        block_commit.style.display = 'none';
         block_entreprise.style.display = 'none';
         block_projets.style.display = 'none';
         block_contact.style.display = 'none';
+        menu_commit.classList.remove('active');
         menu_contact.classList.remove('active');
         menu_entreprise.classList.remove('active');
         menu_projets.classList.remove('active');
@@ -59,6 +63,8 @@ window.onload = function () {
         block_presentation.style.display = 'none';
         block_projets.style.display = 'none';
         block_contact.style.display = 'none';
+        block_commit.style.display = 'none';
+        menu_commit.classList.remove('active');
         menu_contact.classList.remove('active');
         menu_presentation.classList.remove('active');
         menu_projets.classList.remove('active');
@@ -70,10 +76,12 @@ window.onload = function () {
         block_presentation.style.display = 'none';
         block_entreprise.style.display = 'none';
         block_contact.style.display = 'none';
+        block_commit.style.display = 'none';
         menu_contact.classList.remove('active');
         menu_presentation.classList.remove('active');
         menu_entreprise.classList.remove('active');
         menu_projets.classList.add('active');
+        menu_commit.classList.remove('active');
     })
 
     menu_contact.addEventListener('click', (e) => {
@@ -81,12 +89,26 @@ window.onload = function () {
         block_presentation.style.display = 'none';
         block_entreprise.style.display = 'none';
         block_projets.style.display = 'none';
+        block_commit.style.display = 'none';
         menu_projets.classList.remove('active');
         menu_presentation.classList.remove('active');
         menu_entreprise.classList.remove('active');
         menu_contact.classList.add('active');
+        menu_commit.classList.remove('active');
     })
 
+    menu_commit.addEventListener('click', (e) => {
+        block_contact.style.display = 'none';
+        block_presentation.style.display = 'none';
+        block_entreprise.style.display = 'none';
+        block_projets.style.display = 'none';
+        block_commit.style.display = 'flex';
+        menu_projets.classList.remove('active');
+        menu_presentation.classList.remove('active');
+        menu_entreprise.classList.remove('active');
+        menu_contact.classList.remove('active');
+        menu_commit.classList.add('active');
+    })
 
     // definition of the main functions
     function updateDateTime() {

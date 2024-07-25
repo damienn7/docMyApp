@@ -321,6 +321,43 @@
   font-size: 14px;
 }
 
+/* commit css class */
+
+.commit {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 0;
+}
+
+.commit:last-child {
+  border-bottom: none;
+}
+
+.commit-date {
+  font-size: 14px;
+  color: #888;
+}
+
+.commit-id {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+
+.commit-id a {
+  text-decoration: none;
+  color: #3498db;
+  transition: color 0.3s;
+}
+
+.commit-id a:hover {
+  color: #2980b9;
+}
+
+.github-user {
+  font-size: 14px;
+  color: #666;
+}
+
  /* animation css */
  @keyframes slidefromtop {
     from {
