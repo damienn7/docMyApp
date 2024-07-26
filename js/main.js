@@ -8,6 +8,7 @@
 // here is the main function
 window.onload = function () {
     // HTML elements
+    let flag_menu = "presentation";
     let block_presentation = document.getElementById('presentation');
     let block_entreprise = document.getElementById('entreprise');
     let block_projets = document.getElementById('projets');
@@ -23,28 +24,13 @@ window.onload = function () {
     let container_date = document.getElementsByClassName('style-panel__date')[0];
     let container_hour = document.getElementsByClassName('style-panel__hour')[0];
 
-    var tabButtons = document.querySelectorAll(".tab-button");
-    var tabContents = document.querySelectorAll(".tab-content");
+    var tabButtonsPresentation = document.querySelectorAll("#presentation .tab-button");
+    var tabContentsPresentation = document.querySelectorAll("#presentation .tab-content");
 
-    
-    // DOM events
-    tabButtons.forEach(function(button) {
-        button.addEventListener("click", function() {
-            var tabName = this.getAttribute("data-tab");
+    var tabButtonsProjets = document.querySelectorAll("#projets .tab-button");
+    var tabContentsProjets = document.querySelectorAll("#projets .tab-content");
 
-            tabContents.forEach(function(content) {
-                content.classList.remove("active");
-            });
-
-            tabButtons.forEach(function(btn) {
-                btn.classList.remove("active");
-            });
-
-            document.getElementById(tabName).classList.add("active");
-            this.classList.add("active");
-        });
-    });
-    
+        
     menu_presentation.addEventListener('click', (e) => {
         block_presentation.style.display = 'flex';
         block_commit.style.display = 'none';
@@ -56,6 +42,7 @@ window.onload = function () {
         menu_entreprise.classList.remove('active');
         menu_projets.classList.remove('active');
         menu_presentation.classList.add('active');
+        flag_menu = "presentation";
     })
 
     menu_entreprise.addEventListener('click', (e) => {
@@ -69,6 +56,7 @@ window.onload = function () {
         menu_presentation.classList.remove('active');
         menu_projets.classList.remove('active');
         menu_entreprise.classList.add('active');
+        flag_menu = "entreprise";
     })
 
     menu_projets.addEventListener('click', (e) => {
@@ -82,6 +70,7 @@ window.onload = function () {
         menu_entreprise.classList.remove('active');
         menu_projets.classList.add('active');
         menu_commit.classList.remove('active');
+        flag_menu = "projets";
     })
 
     menu_contact.addEventListener('click', (e) => {
@@ -95,6 +84,7 @@ window.onload = function () {
         menu_entreprise.classList.remove('active');
         menu_contact.classList.add('active');
         menu_commit.classList.remove('active');
+        flag_menu = "contact";
     })
 
     menu_commit.addEventListener('click', (e) => {
@@ -108,7 +98,41 @@ window.onload = function () {
         menu_entreprise.classList.remove('active');
         menu_contact.classList.remove('active');
         menu_commit.classList.add('active');
+        flag_menu = "commit";
     })
+    
+    // DOM events
+    tabButtonsProjets.forEach(function(button) {
+        button.addEventListener("click", function() {
+            var tabName = this.getAttribute("data-tab");
+            tabContentsProjets.forEach(function(content) {
+                content.classList.remove("active");
+            });
+
+            tabButtonsProjets.forEach(function(btn) {
+                btn.classList.remove("active");
+            });
+
+            document.getElementById(tabName).classList.add("active");
+            this.classList.add("active");
+        });
+    });
+
+    tabButtonsPresentation.forEach(function(button) {
+        button.addEventListener("click", function() {
+            var tabName = this.getAttribute("data-tab");
+            tabContentsPresentation.forEach(function(content) {
+                content.classList.remove("active");
+            });
+
+            tabButtonsPresentation.forEach(function(btn) {
+                btn.classList.remove("active");
+            });
+
+            document.getElementById(tabName).classList.add("active");
+            this.classList.add("active");
+        });
+    });
 
     // definition of the main functions
     function updateDateTime() {
